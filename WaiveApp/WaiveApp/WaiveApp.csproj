@@ -1,0 +1,61 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Views\LearnMore.xaml.cs" />
+    <Compile Remove="Views\MainScreen.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Views\LearnMore.xaml" />
+    <EmbeddedResource Remove="Views\MainScreen.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Images\DO.png" />
+    <None Remove="Images\DONT.png" />
+    <None Remove="Images\waivegreen_peak_center.png" />
+    <None Remove="Images\waivegreen_peak_right.png" />
+    <None Remove="Images\waivered_bottom_center.png" />
+    <None Remove="Images\waivered_peak_left.png" />
+    <None Remove="Images\waivered_peak_right.png" />
+    <None Remove="waivegreen1.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\DO.png" />
+    <EmbeddedResource Include="Images\DONT.png" />
+    <EmbeddedResource Include="Images\waivegreen_peak_left.png" />
+    <EmbeddedResource Include="Images\waivegreen_peak_center.png" />
+    <EmbeddedResource Include="Images\waivegreen_peak_right.png" />
+    <EmbeddedResource Include="Images\waivered_peak_left.png" />
+    <EmbeddedResource Include="Images\waivered_bottom_center.png" />
+    <EmbeddedResource Include="Images\waivered_peak_right.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    <PackageReference Include="System.Numerics.Vectors" Version="4.5.0" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\detaillierte_Info.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Impressum.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

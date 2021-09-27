@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WaiveApp.MainPage"
+             xmlns:local="clr-namespace:WaiveApp"
+             BackgroundColor="#FFFFFFFF">
+
+    <NavigationPage.TitleView>
+        <Button x:Name="Impressum_Button"
+                Text="Über Uns"
+                BackgroundColor="#FFFFFF"
+                TextColor="#185B3B" 
+                FontSize = "20"
+                VerticalOptions="End"
+                HorizontalOptions="End"
+                Clicked="UeberUnsButtonClicked"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0}"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.00}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.9}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.1}"/>
+    </NavigationPage.TitleView>
+    <ContentPage.Title BackgroundColor="#FFFFFFFF" FontSize="24" >
+        Mein Waive
+    </ContentPage.Title>
+    <ContentPage.Content>
+        <RelativeLayout>
+            <Button x:Name="location_Button"
+                Text=""
+                BackgroundColor="#FFFFFF"
+                TextColor="#185B3B" 
+                FontSize = "20"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Clicked="ChangeLocationButtonClicked"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0}"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.00}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.9}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.1}"/>
+            <Label x:Name="duration_Label"
+                Text=""
+                BackgroundColor="##00ffffff"
+                TextColor="#000000" 
+                FontSize = "20"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.8}"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.3}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.2}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.1}" />
+            <Image  x:Name="Chart_Image"
+                    Source="{local:ImageResource WaiveApp.Images.waivegreen_peak_center.png}"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="EndAndExpand"
+                    Aspect="Fill"
+                    Margin="0"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, ElementName=SearchControlsGrid,Property=Width, Factor=1, Constant=0 }"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, ElementName=SearchControlsGrid, Property=Height,Factor=1, Constant=0}"/>
+            <Image  x:Name="DoORDont_Image"
+                    Source="{local:ImageResource WaiveApp.Images.DO.png}"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="EndAndExpand"
+                    Aspect="Fill"
+                    Margin="0"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.27}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.05}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, ElementName=SearchControlsGrid,Property=Width, Factor=0.40, Constant=0 }"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, ElementName=SearchControlsGrid, Property=Height,Factor=0.6, Constant=0}"/>
+            <Button x:Name="learn_more_Button"
+                Text="Mehr Info"
+                BackgroundColor="#185B3B"
+                TextColor="#FFFFFF" 
+                FontSize = "20"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Clicked="LearnMoreButtonClicked"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.33}"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.75}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.3}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.2}"/>
+        </RelativeLayout>
+
+
+
+    </ContentPage.Content>
+
+</ContentPage>

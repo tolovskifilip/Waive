@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:WaiveApp.CustomControls"
+             Padding="10"
+             x:Class="WaiveApp.Views.detaillierte_Info"
+             BackgroundColor="#FFFFFFFF">
+    <ContentPage.Title BackgroundColor="#FFFFFFFF" FontSize="24" >
+        Detaillierte Info
+    </ContentPage.Title>
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+            <Label x:Name="location_name_global"
+                Text=""
+                BackgroundColor="#FFFFFF"
+                TextColor="#185B3B" 
+                FontSize = "20"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0}"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.00}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.9}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.1}"/>
+
+            <Label x:Name="Anteil_der_erneurbaren_Energie"
+                Text="Anteil erneuerbarer Quellen"
+                BackgroundColor="#FFFFFF"
+                TextColor="#185B3B" 
+                FontSize = "18"
+                VerticalOptions="End"
+                HorizontalOptions="End"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.00}"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.00}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.9}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.2}"/>
+            <ListView x:Name="listView" >
+                <ListView.ItemTemplate TextColor="#185B3B" FontSize = "18">
+                    <DataTemplate>
+                        <controls:CustomCell   dateTime_of_Prediction="{Binding dateTime_of_Prediction}"
+                                         renewableShare="{Binding renewableShare}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
